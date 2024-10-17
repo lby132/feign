@@ -1,6 +1,7 @@
 package dev.be.feign.config;
 
-import dev.be.feign.interceptor.DemoFeignInterceptor;
+import dev.be.feign.fegin.logger.FeignCustomLogger;
+import feign.Logger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,7 +9,8 @@ import org.springframework.context.annotation.Configuration;
 public class FeignConfig {
 
     @Bean
-    public DemoFeignInterceptor feignInterceptor() {
-        return DemoFeignInterceptor.of();
+    public Logger feignLogger() {
+        return new FeignCustomLogger();
     }
+
 }

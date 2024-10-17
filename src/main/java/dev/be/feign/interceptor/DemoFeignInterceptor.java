@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 
 @RequiredArgsConstructor(staticName = "of")
 public class DemoFeignInterceptor implements RequestInterceptor {
+
     @Override
     public void apply(RequestTemplate template) {
 
